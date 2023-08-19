@@ -1,0 +1,153 @@
+
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    button:hover{
+        background-color: #f4175f;
+    
+
+    }
+    button{
+        color: white;
+        background-color: rgba(255,0, 200,0.11);
+        font-size: 30px;
+        right: 300px;
+        bottom: 140px;
+        position: absolute;
+        
+    }
+    h1:hover{
+        color:green;
+    }
+    h1{
+        position: sticky;
+        color: white;
+        background-color: black;
+        text-align: center;
+
+    }
+    .clock{
+        width: 100%;
+        min-height: 100vh;
+        background:linear-gradient(45deg,#08001f,#30197d);
+        color:white;
+        position: relative;
+    }
+    .time{
+        background:rgba(235, 0,255, 0.11);
+        width: 100%;
+        height: 100%;
+        position:absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(40px);
+    }
+    .box{
+        width: 800px;
+        height: 180px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%)
+    }
+    .box::before{
+        content: '';
+        width: 180px;
+        height: 180px;
+        background: #f4175f;;
+        position: absolute;
+        border-radius: 10px;
+        left: -60px;
+        top: -60px;
+        z-index: -1;
+    }
+    .box::after{
+        content: '';
+        width: 180px;
+        height: 180px;
+        position: absolute;
+        background-color:#419aff;
+        border-radius: 100px;
+        right: -60px;
+        bottom: -60px;
+        z-index: -1;
+    }
+    .time span{
+        font-size: 80px;
+        width: 110px;
+        display: inline-block;
+        text-align: center;
+        position: relative;
+    }
+    .time span::after{
+        content: '';
+        font-size: 16px;
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    #hrs::after{
+        content:'HOURS';
+
+    }
+    #min::after{
+        content: 'MINS';
+    }
+    #sec::after{
+        content: 'SEC';
+    }
+    .dot1{
+        position: absolute;
+        top: -5px;
+    }
+    .dot2{
+        position: absolute;
+        top: -5px;
+    }
+    @media (max-width:576px){
+        .box{
+            width: 576px
+        }
+        
+    }
+    @media (max-width:576px){
+        .time{
+            width: 570px
+        }
+        
+    }
+    @media (max-width:576px){
+        .clock{
+            width: 576px
+        }
+        
+    }
+  
+ @media (max-width:576px){
+        button{
+            position: absolute;
+            right: 50px;
+        }
+        
+    }
+    @media (max-width:576px){
+        .box::after{
+            position: absolute;
+            right: 1px;
+    
+        }
+        
+    }
+    @media (max-width:576px){
+        .box::before{
+            position: absolute;
+            left: 1px;
+    
+        }
+        
+    }
+    
+    
